@@ -1,22 +1,19 @@
-const URL = "https://www.omdbapi.com/?i=tt1285016&apikey=d3e60b9";
+const URL = "https://www.omdbapi.com/?i=tt1285016&apikey=";
 
-const getMoviesByName = async (movieName) => {
-  const result = await fetch(
-    `https://www.omdbapi.com/?t=${movieName}&apikey=d3e60b9`
-  );
+export const getMoviesByName = async (movieName) => {
+  const result = await fetch(`https://www.omdbapi.com/?t=${movieName}&apikey=`);
   const movie = await result.json();
   console.log(movie);
 };
-
-getMoviesByName("spiderman");
+getMoviesByName("X-men");
 getMoviesByName("wolverine");
 
-const getMoviesById = async (movieId) => {
-  const result = await fetch(
-    `https://www.omdbapi.com/?i=${movieId}&apikey=d3e60b9`
-  );
+// export default getMoviesByName;
+
+export const getMoviesById = async (movieId) => {
+  const result = await fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=`);
   const movie = await result.json();
   console.log(movie);
 };
 
-getMoviesById("");
+getMoviesById("tt0120903");
