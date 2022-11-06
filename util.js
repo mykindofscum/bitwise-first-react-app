@@ -1,1 +1,0 @@
-# bitwise-first-react-app
